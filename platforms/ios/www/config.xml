@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="TakeASweater" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>TakeASweater</name>
+    <description>
+        Take-A-Sweater? uses historical weather records to compare currently
+    predicted temperatures with what actually happened under similar conditions
+    in the past.
+    </description>
+    <author email="barthelm@fas.harvard.edu" href="http://www.takeasweater.com">
+        William Barthelmy
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="EnableViewportScale" value="true"/>
+</widget>
