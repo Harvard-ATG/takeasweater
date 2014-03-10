@@ -4,14 +4,14 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-    <title>TakeASweater</title>
+    <title>Sweater</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script type="text/javascript" src="cordova.js"></script>
     
     <script type="text/javascript" src="js/lib/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="js/lib/jquery.mobile-1.4.1.min.js"></script>
-    <script type="text/javascript" src="js/lib/raphael-min-2.1.2.js"></script>
+    <script type="text/javascript" src="js/lib/raphael.js"></script>
     <script type="text/javascript" src="js/mobile.js"></script>
     <script type="text/javascript" src="js/classes/weather.js"></script>
     
@@ -155,13 +155,15 @@
         <div data-role="content"  data-theme="d">
             <div id="credits-text">
                 <p>This App was created in 2012, for use in the Harvard University General Education 
-                    course "<a href="http://isites.harvard.edu/k84386" rel="external" 
-                    target="_blank">The Art of Numbers</a>," taught by <a href="https://www.cfa.harvard.edu/~agoodman/" 
-                    rel="external" target="_blank">Prof. Alyssa Goodman</a>. The code was written by Bill Barthelmy of Harvard’s 
-                    <a href="http://atg.fas.harvard.edu/" rel="external" target="_blank">Academic Technology Group</a>.  
+                    course "<a href="#"
+                        onclick="var ref = window.open('http://isites.harvard.edu/k84386', '_system', 'location=yes');">The Art of Numbers</a>," taught by <a href="#"
+                        onclick="var ref = window.open('https://www.cfa.harvard.edu/~agoodman/', '_system', 'location=yes');">Prof. Alyssa Goodman</a>. The code was written by Bill Barthelmy of Harvard’s 
+                    <a href="#"
+                        onclick="var ref = window.open('http://atg.fas.harvard.edu/', '_system', 'location=yes');">Academic Technology Group</a>.  
                     Historical data were kindly provided by <a href="#"
-                        onclick="window.open('http://forecastwatch.com/ ', '_blank', 'location=yes');">ForecastWatch</a>, a product of Intellovations, LLC. Current five-day weather
-                    forecast data are provided by <a href="http://www.noaa.gov/" rel="external" target="_blank">NOAA</a>.
+                        onclick="var ref = window.open('http://forecastwatch.com/', '_system', 'location=yes');">ForecastWatch</a>, 
+					a product of Intellovations, LLC. Current five-day weather forecast data are provided by <a href="#"
+	                        onclick="var ref = window.open('http://www.noaa.gov/', '_system', 'location=yes');">NOAA</a>.
                 </p>
                 <p>Our goal in creating this App was to offer an example of how the "uncertainty" 
                    associated with computer modeling and prediction can best be displayed, and 

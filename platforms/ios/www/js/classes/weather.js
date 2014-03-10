@@ -175,12 +175,13 @@ TempRange.prototype.createHistogram = function( paper ) {
     // create a label that will fit in available space
     if ( Forecast.handHeld ) $('#hist_display_date').html(' ')
     else                     $('#hist_display_date').html('Histogram ');
+	
     $('#hist_display_date').append( '<span id="display_month">' + this.displayMonth + '</span> <span id="display_date">' +this.displayDate + '</span>' );
     
     var xLabel  = paper.text( leftDisplay + 80, 10, "Number of Occurrences" )
                        .attr({'font-family':'Verdana, sans-serif','font-size':'12'});;
-    var yLabel  = paper.text( leftDisplay-37, 115, "(Actual - Predicted) Temperature" ).rotate(-90)
-                       .attr({'font-family':'Verdana, sans-serif','font-size':'12','text-align':'right'});
+    // var yLabel  = paper.text( leftDisplay-37, 115, "(Actual - Predicted) Temperature" ).rotate(-90)
+	// oddly the x & y coordinates get switched when you rotate it -90 degrees
     var yArrow  = paper.path( 'M'+ leftDisplay +',30l0,' + yArrowLength )
                        .attr({stroke:'#999','stroke-width':3,'arrow-end':'block'});
     var yArrow2 = paper.path( 'M'+ leftDisplay +',30l0,-20' )
@@ -196,6 +197,16 @@ TempRange.prototype.createHistogram = function( paper ) {
                          .attr({title: deg + ': ' + this.histogramHash[deg]})
                          .attr({stroke:'none', fill: this.fill, opacity: color})
                          .toBack();
+
+		// add the x coordinate line & a label
+        if (deg == 0 ) {
+            var xArrow  = paper.path( 'M'+ (leftDisplay-1) +',' +  (y + pixelsPerUnit/2) + 'l' + xArrowLength + ',0')
+                               .attr({stroke:'#999','stroke-width':3,'arrow-end':'block'});
+            this.createLabel( paper, (left+gw/2), (y + pixelsPerUnit/2), this.predicted, false, false );
+			// center y axis label here
+		    var yLabel  = paper.text( -y, 24, "(Actual - Predicted) Temperature" ).rotate(-90)
+		                       .attr({'font-family':'Verdana, sans-serif','font-size':'12', 'text-align':'center'});
+        }
         
         if ( w != 0 ) {
              var bar   = paper.rect( leftDisplay, y, w, pixelsPerUnit ).attr({stroke: this.fill}).toBack();
@@ -205,11 +216,6 @@ TempRange.prototype.createHistogram = function( paper ) {
         //  add a marker every 5 degrees
         if (deg % 5 == 0) {
             var delta = paper.image('images/'+deg+'.png',leftDisplay-32, y-2,30,15);
-        }
-        if (deg == 0 ) {
-            var xArrow  = paper.path( 'M'+ (leftDisplay-1) +',' +  (y + pixelsPerUnit/2) + 'l' + xArrowLength + ',0')
-                               .attr({stroke:'#999','stroke-width':3,'arrow-end':'block'});
-            this.createLabel( paper, left+gw/2, y + pixelsPerUnit/2, this.predicted );
         }
         i++;
     }
@@ -245,13 +251,14 @@ TempRange.prototype.createGradient = function( paper, left ) {
 
 TempRange.prototype.createLabel = function( paper, x, y, temp, day, hl ) {
     var image = paper.image( this.orb, x-16, y-15, 32, 32 ).attr({opacity:0.7});
-    var label = paper.text( x, y,  temp )
-                     .attr({'font-family':'Verdana, sans-serif','font-size':'16',fill:'#fff'});
+    var label = paper.text( x, y, temp ).attr({font:'16px Verdana', fill:'#fff'});
     // add a link only if needed
     if ( day ) {
         image.click( function() { showHistogram( day, hl ); }).attr({cursor:'pointer'});
         label.click( function() { showHistogram( day, hl ); }).attr({cursor:'pointer'});
-    }
+    } else {
+		$('svg > text > tspan').attr( 'dy', '6.5' );
+	}
 }
 
 

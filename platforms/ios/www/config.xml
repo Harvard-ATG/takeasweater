@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="TakeASweater" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>TakeASweater</name>
+<widget id="Sweater" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Sweater</name>
     <description>
         Take-A-Sweater? uses historical weather records to compare currently
     predicted temperatures with what actually happened under similar conditions
@@ -10,6 +10,11 @@
         William Barthelmy
     </author>
     <content src="index.html" />
-    <access origin="*" />
+    <access origin="http://forecastwatch.com" />
+    <access origin="http://atg.fas.harvard.edu" />
+    <access origin="https://www.cfa.harvard.edu/~agoodman" />
+    <feature name="InAppBrowser">
+        <param name="ios-package" value="CDVInAppBrowser" />
+    </feature>
     <preference name="EnableViewportScale" value="true"/>
 </widget>

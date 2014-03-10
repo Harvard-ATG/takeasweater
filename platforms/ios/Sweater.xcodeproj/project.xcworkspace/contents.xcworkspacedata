@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:TakeASweater.xcodeproj">
+      location = "self:Sweater.xcodeproj">
    </FileRef>
 </Workspace>
