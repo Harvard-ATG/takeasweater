@@ -1,0 +1,23 @@
+2014-03-09 12:46:36.875 Sweater[24474:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-09 12:46:36.885 Sweater[24474:80b] Unlimited access to network resources
+2014-03-09 12:46:37.067 Sweater[24474:80b] Resetting plugins due to page load.
+2014-03-09 12:46:37.318 Sweater[24474:80b] Finished load of: file:///Users/bilbe/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/D8C4D145-1FA4-41D4-AD6E-59397CBEF808/Sweater.app/www/index.html
+2014-03-09 12:46:53.318 Sweater[24474:80b] CDVWebViewDelegate: Navigation started when state=1
+2014-03-09 12:46:53.318 Sweater[24474:80b] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2014-03-09 12:46:53.319 Sweater[24474:80b] Resetting plugins due to page load.
+2014-03-09 12:46:54.505 Sweater[24474:80b] Finished load of: http://forecastwatch.com/
+2014-03-09 12:49:02.274 Sweater[27311:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-09 12:49:02.283 Sweater[27311:80b] Unlimited access to network resources
+2014-03-09 12:49:02.447 Sweater[27311:80b] Resetting plugins due to page load.
+2014-03-09 12:49:02.786 Sweater[27311:80b] Finished load of: file:///Users/bilbe/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/D8C4D145-1FA4-41D4-AD6E-59397CBEF808/Sweater.app/www/index.html
+2014-03-09 12:49:14.277 Sweater[27311:80b] THREAD WARNING: ['InAppBrowser'] took '211.433838' ms. Plugin should use a background thread.
+2014-03-09 12:54:39.362 Sweater[29216:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-09 12:54:39.371 Sweater[29216:80b] Unlimited access to network resources
+2014-03-09 12:54:39.538 Sweater[29216:80b] Resetting plugins due to page load.
+2014-03-09 12:54:39.841 Sweater[29216:80b] Finished load of: file:///Users/bilbe/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/D8C4D145-1FA4-41D4-AD6E-59397CBEF808/Sweater.app/www/index.html
+2014-03-09 12:54:47.936 Sweater[29216:80b] THREAD WARNING: ['InAppBrowser'] took '218.946045' ms. Plugin should use a background thread.
+2014-03-15 07:24:11.926 Sweater[58980:70b] Multi-tasking -> Device: YES, App: YES
+2014-03-15 07:24:11.941 Sweater[58980:70b] Unlimited access to network resources
+2014-03-15 07:24:12.109 Sweater[58980:70b] Resetting plugins due to page load.
+2014-03-15 07:24:12.382 Sweater[58980:70b] Finished load of: file:///Users/bilbe/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/88714683-C6FB-4FFC-9786-7B8D1D6B9756/Sweater.app/www/index.html
+2014-03-15 07:24:18.054 Sweater[58980:70b] THREAD WARNING: ['InAppBrowser'] took '218.231934' ms. Plugin should use a background thread.
